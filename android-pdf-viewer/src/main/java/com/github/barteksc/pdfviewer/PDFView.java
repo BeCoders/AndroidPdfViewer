@@ -1282,7 +1282,8 @@ public class PDFView extends RelativeLayout {
         }
 
         public void load() {
-            PDFView.this.recycle();
+            //PDFView.this.recycle();
+            this.recycled = true;
             PDFView.this.callbacks.setOnLoadComplete(onLoadCompleteListener);
             PDFView.this.callbacks.setOnError(onErrorListener);
             PDFView.this.callbacks.setOnDraw(onDrawListener);
